@@ -43,7 +43,7 @@ func init() {
 	fmt.Println("⏯ inside think-love init")
 
 	thinkCmd.AddCommand(loveCmd)
-	playCmd.AddCommand(loveCmd)
+	//playCmd.AddCommand(loveCmd)
 
 	// Here you will define your flags and configuration settings.
 
