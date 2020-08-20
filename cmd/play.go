@@ -27,31 +27,33 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// loveCmd represents the love command
-var loveCmd = &cobra.Command{
-	Use:   "love",
-	Short: "A brief description of love cmd.",
-	Long:  `A longer description that spans multiple lines and likely contains love command.`,
+// playCmd represents the play command
+var playCmd = &cobra.Command{
+	Use:   "play",
+	Short: "A brief description of your command",
+	Long: `A longer description that spans multiple lines and likely contains examples
+and usage of using your command. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("think love called")
-		fmt.Println("parent", cmd.Parent().Name())
-		fmt.Println("child", cmd.Name())
+		fmt.Println("play called")
 	},
 }
 
 func init() {
-	fmt.Println("⏯ inside think-love init")
+	fmt.Println("⏯ inside play init")
 
-	thinkCmd.AddCommand(loveCmd)
-	playCmd.AddCommand(loveCmd)
+	rootCmd.AddCommand(playCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// loveCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// playCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// loveCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// playCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
