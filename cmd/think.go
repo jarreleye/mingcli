@@ -30,10 +30,11 @@ import (
 
 // thinkCmd represents the think command
 var thinkCmd = &cobra.Command{
-	Use:   "think",
-	Short: "A brief description of think cmd.",
-	Long:  `A longer description of think command.`,
-	Args:  cobra.MinimumNArgs(1),
+	Use:     "think",
+	Aliases: []string{"t", "tk"},
+	Short:   "A brief description of think cmd.",
+	Long:    `A longer description of think command.`,
+	Args:    cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("think called")
 		fmt.Printf("count args: %d\n", len(args))
