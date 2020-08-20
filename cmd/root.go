@@ -55,6 +55,8 @@ func Execute() {
 }
 
 func init() {
+	fmt.Println("⏯ inside root init")
+
 	cobra.OnInitialize(initConfig)
 
 	// Here you will define your flags and configuration settings.
@@ -70,6 +72,8 @@ func init() {
 
 // initConfig reads in config file and ENV variables if set.
 func initConfig() {
+	fmt.Println("🙄 inside init config")
+
 	if cfgFile != "" {
 		// Use config file from the flag.
 		viper.SetConfigFile(cfgFile)

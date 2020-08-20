@@ -32,7 +32,8 @@ import (
 var thinkCmd = &cobra.Command{
 	Use:   "think",
 	Short: "A brief description of think cmd.",
-	Long: `A longer description of think command.`,
+	Long:  `A longer description of think command.`,
+	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("think called")
 		fmt.Printf("count args: %d\n", len(args))
@@ -41,6 +42,8 @@ var thinkCmd = &cobra.Command{
 }
 
 func init() {
+	fmt.Println("⏯ inside think init")
+
 	rootCmd.AddCommand(thinkCmd)
 
 	// Here you will define your flags and configuration settings.

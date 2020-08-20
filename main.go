@@ -21,8 +21,13 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/jarreleye/mingcli/cmd"
+import (
+	"fmt"
+
+	"github.com/jarreleye/mingcli/cmd"
+)
 
 func main() {
+	fmt.Println("▶️ inside main func")
 	cmd.Execute()
 }
